@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.js"></script>
+        <title>First p5.js project</title>
+    </head>
+    <body>
+        <div>
+            <label>First p5.js project</label>
+            <br><br>
+            <button onclick="take_snapshot()">Take Snapshot</button>
+            
+        </div>
+       <script>function preload() {
+
+    }
+    
+    function setup() {
+        canvas = createCanvas(680,480);
+        canvas.position(150,150);
+        video = createCapture(VIDEO);
+        video.hide();
+    }
+    
+    function draw() {
+        image(video,100,100,720,480)
+    
+        fill(255,0,0);
+        stroke(255,0,0);
+        circle(90,90,80);
+    
+        fill(0,128,0);
+        stroke(0,128,0);
+        rect(80,80,460,20);
+    
+        rect(90,470,460,20);
+    }
+    
+    function take_snapshot() {
+        save("Rish10Rash18");
+    }</script>   
+    </body>
+</html>
